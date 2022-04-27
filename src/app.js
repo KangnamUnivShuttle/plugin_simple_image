@@ -21,7 +21,7 @@ app.post("/chat", (req, res) => {
   // successResponse.template.outputs[0].simpleText.text = process.env.msg || '여기에 텍스트를 입력'
   img1 =
     process.env.img1 ||
-    "http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg";
+    "https://avatars.githubusercontent.com/u/90174761?s=200&v=4";
 
   successResponse.template.outputs[0].simpleImage.imageUrl = img1;
   successResponse.template.quickReplies = JSON.parse(
