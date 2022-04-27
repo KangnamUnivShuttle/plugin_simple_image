@@ -1,0 +1,24 @@
+version: '3'
+networks:
+  infra_chatbot:
+    external: true
+services:
+  plugin_simple_toss_:
+    image: plugin_simple_toss
+    build: ./
+    container_name: plugin_simple_toss_
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - infra_chatbot
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: 128M
+    logging:
+      driver: json-file
+      options:
+        max-file: '5'
+        max-size: 10m
